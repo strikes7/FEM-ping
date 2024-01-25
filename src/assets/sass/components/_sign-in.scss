@@ -1,0 +1,59 @@
+@use "../abstract/" as *;
+
+.sign-in{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__email{
+        box-sizing: border-box;
+        flex-grow: 1;
+        padding-inline: 2rem;
+        line-height: 1;
+        border: 1px solid $clr-blue-100;
+        font-weight: 300;
+        color:  $clr-blue-300;
+        font-size: $fs-600;
+        
+        &::placeholder{
+            color:  $clr-blue-100;
+        }
+
+        &[data-is-valid="false"]{
+            border-color: $clr-red-100;
+        }
+    }
+
+    &__send{
+        margin-inline-start: 1rem;
+        padding-inline: toRem(62);
+        background-color: $clr-blue-200;
+        color: $clr-neutral-100;
+        border-width: 0;
+        font-size: $fs-400;
+        font-weight: 600;
+        box-shadow: 0 0.5rem 1rem -0.2rem $clr-blue-100;
+        outline-offset: 4px;
+        cursor: pointer;
+    }
+
+    &__email, &__send{
+        height: toRem(52);
+        border-radius: toRem(30);
+        font-family: $ff-primary;
+    }
+
+    &__error-message{
+        opacity: 0;
+        margin-block-start: .75rem;
+        margin-inline-start: 2.05rem;
+        font-size: $fs-300;
+        font-style: italic;
+        color: $clr-red-100;
+        transition: opacity .25s ease-in-out;
+
+        &[aria-hiden="false"]{
+            opacity: 1;
+        }
+    }
+}

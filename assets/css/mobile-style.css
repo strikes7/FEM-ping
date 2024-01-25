@@ -1,0 +1,11 @@
+.site__catchphrase {
+  font-size: clamp(1.7rem, 7vw, 3rem);
+}
+
+.sign-in__send {
+  margin-block-start: 1.125rem;
+  margin-inline-start: 0;
+}
+.sign-in__email, .sign-in__send {
+  width: 100%;
+}

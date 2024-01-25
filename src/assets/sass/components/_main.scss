@@ -1,0 +1,56 @@
+@use "../abstract/" as *;
+
+main {
+    box-sizing: border-box;
+    width: min(80%, toRem(635));
+    margin-block-start: toRem(80);
+    margin-inline: auto;
+}
+
+.site{
+
+    &__logo{
+        width: fit-content;
+        display: block;
+        margin-inline: auto;
+        outline-offset: 6px;
+        & > img{
+            vertical-align: middle;
+            width: toRem(86);
+        }
+    }
+
+    &__catchphrase{
+        margin-block: 2.5rem 0;
+        font-size: $fs-700;
+        font-weight: 300;
+        color: $clr-neutral-200;
+
+        & >span{
+            font-weight: 700;
+            color: $clr-blue-300;
+        }
+    }
+
+    &__sub-text{
+        margin-block: .9rem 2.25rem ;
+        font-size: $fs-600;
+        color: $clr-blue-300;
+    }
+
+    &__catchphrase, &__sub-text, &__copyright{
+        text-align: center;
+    }
+
+    &__hero{
+        margin-block: toRem(37) toRem(70);
+        display: block;
+        width: 100%;
+    }
+
+    &__copyright{
+        margin-block: 1.4rem 0;
+        font-size: $fs-300;
+        color:$clr-neutral-200;
+    }
+}

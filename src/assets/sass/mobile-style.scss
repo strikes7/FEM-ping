@@ -1,0 +1,19 @@
+@use "abstract/" as *;
+.site{
+    &__catchphrase{
+        font-size: clamp($fs-650, 7vw, $fs-700) ;
+    }
+}
+
+.sign-in{
+
+    &__send{
+        margin-block-start: 1.125rem;
+        margin-inline-start: 0;
+    }
+
+    &__email,
+    &__send{
+        width: 100%;
+    }
+}
